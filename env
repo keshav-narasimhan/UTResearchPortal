@@ -1,0 +1,3 @@
+MONGO_CLIENT=mongodb+srv://utresearchportal:YmjWgnu1ulvTt5C9@cluster0.txbnatc.mongodb.net/test
+ENCRYPTION_NUM_POSITIONS=15
+ENCRYPTION_DIRECTION=1
