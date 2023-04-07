@@ -13,7 +13,7 @@ def tryLogin(user, isStudent):
 
     cert = certifi.where()
     load_dotenv()
-    client = MongoClient(os.getenv('MONGO_CLIENT'), tlsCAFile=cert)
+    client = MongoClient("mongodb+srv://utresearchportal:YmjWgnu1ulvTt5C9@cluster0.txbnatc.mongodb.net/test", tlsCAFile=cert)
 
     db = client["ut-research-portal"]
     col = None
@@ -50,7 +50,7 @@ def storeNewAccountInDB(account):
 
     cert = certifi.where()
     load_dotenv()
-    client = MongoClient(os.getenv('MONGO_CLIENT'), tlsCAFile=cert)
+    client = MongoClient("mongodb+srv://utresearchportal:YmjWgnu1ulvTt5C9@cluster0.txbnatc.mongodb.net/test", tlsCAFile=cert)
 
     db = client["ut-research-portal"]
     id_col = db["ids"]
@@ -131,7 +131,7 @@ def getPositions():
     # connect to DB
     cert = certifi.where()
     load_dotenv()
-    client = MongoClient(os.getenv('MONGO_CLIENT'), tlsCAFile=cert)
+    client = MongoClient("mongodb+srv://utresearchportal:YmjWgnu1ulvTt5C9@cluster0.txbnatc.mongodb.net/test", tlsCAFile=cert)
     db = client["ut-research-portal"]
     col = db["positions"]
 
@@ -145,7 +145,7 @@ def applyToPosition(application):
     # connect to DB
     cert = certifi.where()
     load_dotenv()
-    client = MongoClient(os.getenv('MONGO_CLIENT'), tlsCAFile=cert)
+    client = MongoClient("mongodb+srv://utresearchportal:YmjWgnu1ulvTt5C9@cluster0.txbnatc.mongodb.net/test", tlsCAFile=cert)
     db = client["ut-research-portal"]
 
     # get the position
@@ -188,7 +188,7 @@ def addNewPosition(new_position):
     # connect to DB
     cert = certifi.where()
     load_dotenv()
-    client = MongoClient(os.getenv('MONGO_CLIENT'), tlsCAFile=cert)
+    client = MongoClient("mongodb+srv://utresearchportal:YmjWgnu1ulvTt5C9@cluster0.txbnatc.mongodb.net/test", tlsCAFile=cert)
     db = client["ut-research-portal"]
 
     # get position_id
@@ -243,14 +243,14 @@ def generateEncryption(inputText):
     for ch in encryptedText:
         currASCII = ord(ch)
         times = 0
-        if (int(os.getenv("ENCRYPTION_DIRECTION")) < 0):
-            while (times < int(os.getenv("ENCRYPTION_NUM_POSITIONS"))):
+        if (1 < 0):
+            while (times < 15):
                 currASCII -= 1
                 if (currASCII < 34):
                     currASCII = 126
                 times += 1
         else:
-            while (times < int(os.getenv("ENCRYPTION_NUM_POSITIONS"))):
+            while (times < 15):
                 currASCII += 1
                 if (currASCII > 126):
                     currASCII = 34
