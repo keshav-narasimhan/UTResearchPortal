@@ -119,7 +119,7 @@ const FacultyDashboard = (props) => {
       <h1 style={styles.welcome}>
         <b>Your Research Positions</b>
       </h1>
-      {positions.length !== 0 && <SearchBar placeholder="Search for a position" data={positions} />}
+      {positions.length !== 0 && <SearchBar placeholder="Search for a position" data={positions} bool={false} />}
       {/* {positions.length === 0 ? (
         <h1 style={styles.subtitle}>No Research Positions</h1>
       ) : (

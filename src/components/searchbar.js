@@ -3,7 +3,7 @@ import "../searchbar.css";
 import ResearchPositionComponentStudent from "./researchpositioncomponentstudent";
 import ResearchPositionComponentFaculty from "./researchpositioncomponentfaculty";
 
-function SearchBar({ placeholder, data }) {
+function SearchBar({ placeholder, data, bool }) {
   const [filteredData, setFilteredData] = useState(data);
   const [wordEntered, setWordEntered] = useState("");
 
@@ -69,9 +69,14 @@ function SearchBar({ placeholder, data }) {
             No research positions...
           </h1>
         ) : (
+          bool ? 
           filteredData.map((pos) => (
+            <ResearchPositionComponentStudent pos={pos} />
+          ))
+          : filteredData.map((pos) => (
             <ResearchPositionComponentFaculty pos={pos} />
           ))
+
         )}
       </div>
     </div>

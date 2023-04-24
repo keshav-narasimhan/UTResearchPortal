@@ -113,7 +113,7 @@ const StudentDashboard = (props) => {
         </div>
       </div>
       {/* <Navbars /> */}
-      {positions.length !== 0 && <SearchBar placeholder="Search for a position" data={positions} />}
+      {positions.length !== 0 && <SearchBar placeholder="Search for a position" data={positions} bool={true} />}
       
       {/* <Outlet /> */}
       <p class="p-3" />
