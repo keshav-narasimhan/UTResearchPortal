@@ -14,7 +14,7 @@ const TextArea = (props) => {
 
     return (
         <div>
-            <label>
+            <label class='text-white'>
                 <b>Question: </b> {props.q}
             </label>
 
@@ -71,7 +71,7 @@ const Apply = (props) => {
 
   return (
     <div className="App">
-        <h1 class='text-4xl p-5 font-semibold'> Application for {state.position} at {state.lab_name} </h1>
+        <h1 class='text-4xl p-5 font-semibold text-white'> Application for {state.position} at {state.lab_name} </h1>
         <p></p>
 
         <TextField 
